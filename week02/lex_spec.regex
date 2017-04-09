@@ -1,0 +1,28 @@
+keyword: "if" or "else" or "then" or ..
+
+'i''f' + 'e''l''s''e' + ...
+
+'if' + 'else' + 'then' + ...
+
+integer: a non-empty string of digits
+
+digit = '0' + '1' + '2' + '3' + '4' + '5' + '6' + '7' + '8' + '9'
+digits = digit.digit* = digit+
+
+identifier: strings of letters or digits, starting with a letter.
+
+letter = [a-zA-Z]
+identifier = letter.(letter + digit)*
+
+Whitespace: a non-empty sequence of blanks, newlines, and tabs
+
+whitespace = (' ' + '\n' + '\t')+
+
+--------------
+PASCAL
+
+digit = '0' + '1' + ... + '9'
+digits = digit+
+opt_fraction = ('.'digits) + ε = ('.'digits)?
+opt_exponent = ('E' ('+' + '-' + ε) digits) + ε = ('E' ('+' + '-')? digits)?
+num = digits opt_fraction opt_exponent
